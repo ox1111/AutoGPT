@@ -1,3 +1,58 @@
+# 설치 참고 : https://wikidocs.net/198402
+'''bash
+git clone -b stable https://github.com/Significant-Gravitas/Auto-GPT.git
+cd Auto-GPT
+pip install -r requirements.txt
+
+cp .env.template .env
+
+
+.env 작성
+
+.env 파일 생성
+
+다음 명령을 실행.
+
+cp .env.template .env
+OpenAI API 키 설정
+
+OpenAI API 키를 발급받고 복사
+.env 파일에서 OPENAI_API_KEY=로 시작하는 행을 찾아 자신의 OpenAI API 키를 기재
+구글 API 키와 커스텀 서치 ID 설정
+
+구글 API 키 설정
+Google Cloud Console에서 프로젝트를 생성
+https://console.cloud.google.com/
+
+API 키 생성
+.env 파일의 GOOGLE_API_KEY= 뒷부분에 자신의 구글 API 키를 기재
+구글 커스텀 서치 설정
+Custom Search API 활성화
+https://cse.google.com/cse/all
+Custom Search Engine에서 새 검색엔진을 만들고 검색엔진 ID를 복사
+검색엔진 ID를 .env 파일의 CUSTOM_SEARCH_ENGINE_ID= 뒤에 붙여 넣음.
+[선택 사항] 로컬 명령어 실행 허가
+
+Auto-GPT가 파이썬 코드 이외의 로컬 명령어를 실행하도록 허가하려면 .env 파일의 EXECUTE_LOCAL_COMMANDS를 True로 바꾸고 주석을 해제한다.
+
+EXECUTE_LOCAL_COMMANDS=True
+※ Auto-GPT를 실행하면 메모리 파일([프로젝트 홈]/autogpt/auto/auto_gpt_workspace/auto-gpt.json)이 자동으로 만들어지므로 설치 시 따로 작업할 필요가 없다.
+
+
+python -m autogpt
+
+다음 그림과 같이 공지사항(NEWS) 아래에 I want Auto-GPT to:라는 프롬프트가 나온다. 이곳에 원하는 것을 입력하면 된다.
+
+
+google 클라우드 api 키 만들기
+
+https://cloud.google.com/docs/authentication/api-keys?hl=ko
+
+
+
+
+'''
+
 # 🌟 AutoGPT: the heart of the open-source agent ecosystem
 
 [![Discord Follow](https://dcbadge.vercel.app/api/server/autogpt?style=flat)](https://discord.gg/autogpt) [![GitHub Repo stars](https://img.shields.io/github/stars/Significant-Gravitas/AutoGPT?style=social)](https://github.com/Significant-Gravitas/AutoGPT/stargazers) [![Twitter Follow](https://img.shields.io/twitter/follow/auto_gpt?style=social)](https://twitter.com/Auto_GPT) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
